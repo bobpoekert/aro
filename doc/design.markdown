@@ -1,6 +1,7 @@
 Everything is 2d for now.
 
 Each object has the following:
+
     * A position in space (which is indexed in a global quadtree)
     * Some non-indexed opengl stuff (transformation matrix, texture, etc)
     * A struct containing all of the fields
