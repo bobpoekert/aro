@@ -8,6 +8,7 @@ Each object has the following:
 A qual is a set of conditions which cause the handler to execute when they're all met.
 
 A condition is:
+
     * An operator (=, <, >, <=, >=, !=, etc)
     * A reference to the value on the left-hand side
     * A reference to the value on teh right-hand side
@@ -15,11 +16,13 @@ A condition is:
     * A boolean flag indicating whether it's currently true
 
 A qual is:
+
     * A vector of conditions
     * A payload to execute when conditions become true
     * A set of objects that are currently matching
 
 Sets of pointers are represented as a single prefix trie.
+
     * space efficient (pointers often have shared prefixes)
     * O(log n) membership test
     * O(n) intersection
@@ -27,6 +30,7 @@ Sets of pointers are represented as a single prefix trie.
 global index `<class, field>` -> set of conditions
 
 To update a field:
+
     * change the value in the object struct
     * look up condition set
     * for each condition:
