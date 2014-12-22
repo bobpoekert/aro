@@ -45,3 +45,6 @@ To update a field:
             * if object is in qual's object set:
                 * decrement the counter for the object in the qual's object set
                 * if the counter <= 0, remove the object from the set
+
+
+Inheritance is entirely static (the compiler just groups all the when clauses together). Normally inheritance is asking for trouble, but because our data dependencies and effects are explicit (because they're expressed as relations) we can know at compile-time whether two when clauses overlap (effect one or more of the same variables when one or more of the same data dependencies change). So we can cause compliation to fail if a subclass could contradict its superclass in any case.
