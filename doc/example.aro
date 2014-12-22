@@ -7,7 +7,7 @@ class Sprite:
     public rotation:Double
     public texture:Image
 
-class Dude<Sprite>:
+class Dude is Sprite:
 
     public constant attack:Int
     public constant defense:Int
@@ -16,7 +16,7 @@ class Dude<Sprite>:
     when me.health <= 0:
         animate(me, 'die') then free(me) # `then` indicates sequential operations
 
-class Goomba<Dude>:
+class Goomba is Dude:
     texture = asset('goomba/normal')
     public constant defense = 20 # type inferred from value
     public constant attack = 10
